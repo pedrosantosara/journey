@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" />
+    <button>ok</button>
+    <script>
+      let texto = document.querySelector("input");
+      let button = document.querySelector("button");
+      button.onclick = verifica;
+
+      function sorteia(n) {
+        let numeros = [];
+        let x = 0;
+        for (x; x < n; x++) {
+          let verifica = numeros.push(Math.round(Math.random() * 10));
+          if (verifica != 0) {
+            let numeroIgual = false;
+            for (let i = 0; i < numeros.length; i++) {
+              if (numeros[i] == verifica) {
+                numeroIgual = true;
+                break;
+              }
+            }
+            if (numeroIgual == false) {
+              numeros.push(verifica);
+              x++;
+            }
+          }
+        }
+        return numeros;
+      }
+
+      let segredos = sorteia(3);
+      console.log(segredos);
+
+      function verifica() {
+        let i;
+        let verificacao = false;
+        for (i = 0; i < segredos.length; i++) {
+          if (texto.value == segredos[i]) {
+            alert("voce acertou");
+            verificacao = true;
+            break;
+          }
+        }
+        if (verificacao == false) {
+          alert("errado");
+        }
+      }
+
+      texto.focus();
+      texto.value = "";
+    </script>
+  </body>
+</html>

@@ -8,6 +8,7 @@ body {
 #hero {
     width: 592px;
     margin: 72px;
+    margin: auto;
 }
 
 h1 {

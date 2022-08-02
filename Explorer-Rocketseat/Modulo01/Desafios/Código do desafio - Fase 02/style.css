@@ -1,32 +1,30 @@
 body {
     margin: 0;
-  
     font-family: "Open Sans", sans-serif;
-  
     background: linear-gradient(90deg, rgb(227, 255, 248, 0) 82.08%, rgb(227, 255, 248, 0.38) 100%);
-  
     min-height: 100vh;
   }
   
   .page {
-    width: 600px;
-    margin: 0 auto;
+    width: 1000px;
+    margin: 0 auto 0;
     padding-top: 65px;
   }
   
   nav {
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
-  
-    margin-bottom: 15px;
+    margin-bottom: 55px;
   }
   
   ul {
     display: flex;
     list-style: none;
+    gap: 48px; 
     margin: 0;
     padding: 0;
+    font-family: 'Mulish', sans-serif;
   }
   
   a {
@@ -48,10 +46,18 @@ body {
     font-family: "Mulish", sans-serif;
   }
   
+  main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  
   h1 {
     font-size: 49px;
     line-height: 56px;
     color: #1f1534;
+    margin-top: 65px;
   
     font-weight: normal;
   
@@ -67,25 +73,22 @@ body {
     font-size: 14px;
     line-height: 28px;
     color: #7d7987;
-  
     margin: 40px 0;
   }
   
   button {
     color: white;
     font-family: "Open Sans", sans-serif;
-  
-    background: #69B99D;
-    border: 0;
-    padding: 0 50px 30px;
-  
     display: flex;
-    justify-content: space-around;
-    gap: 50px;
-  
+    align-items: center;
+    justify-content: center;
+    background: #69B99D;
+    border: none;
     border-radius: 4px;
-  
+    gap: 10px;
     cursor: pointer;
+    padding: 14px 32px 15px;
+    
   }
   
   button:hover {
@@ -95,10 +98,9 @@ body {
   footer {
     font-size: 14px;
     line-height: 28px;
-  
     text-align: center;
-  
     margin-top: 80px;
+    text-align: center;
   }
   
   footer a {
@@ -106,6 +108,7 @@ body {
   }
   
   #balls {
+      position: fixed;
       bottom: 0;
       right: 0;
   }
